@@ -3,7 +3,8 @@
 import React from 'react';
 import "./signup.module.css";
 import image from "../../assets/spacejoy-9M66C_w_ToM-unsplash.jpg";
-
+import axios from 'axios';
+import { useNavigate } from 'react-router';
 const Signup = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -12,7 +13,7 @@ const Signup = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const rePassword = document.getElementById("re_password").value;
-
+    const navigate = useNavigate();
     if (name === "" || email === "" || password === "" || rePassword === "") {
       alert("Please fill in all fields");
       return;

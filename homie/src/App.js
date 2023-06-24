@@ -5,11 +5,19 @@ import {ServicePage} from './Frontend/pages/ServicePage'
 // I'm importing ServicePage just to check 
 import Signup from './Frontend/pages/signup';
 import Login from './Frontend/pages/login';
+import { RouterPath } from './routes';
+import { ServiceProducerPage } from './Frontend/pages/ServiceProducerPage';
 
 function App() {
   return (
     <div className="App">
-     <ServicePage />
+      <RouterPath>
+        <HomePage/>
+        <ServicePage/>
+        <Login/>
+        <Signup/>
+        <ServiceProducerPage/>
+      </RouterPath>
     </div>
   );
 }
